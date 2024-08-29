@@ -53,7 +53,7 @@ import { twMerge } from "tailwind-merge";
 import CheckIcon from "@/assets/check.svg";
 export const Pricing = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
           <h2 className="section-title">Pricing</h2>
@@ -71,7 +71,7 @@ export const Pricing = () => {
           ) => (
             <div
               className={twMerge(
-                "card p-10 boder border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-sm w-full",
+                "card",
                 inverse == true && "border-black bg-black text-white"
               )}
               key={key}
