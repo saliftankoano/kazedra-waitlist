@@ -5,6 +5,8 @@ import Spring from "@/assets/spring.png";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 export const CallToAction = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -19,11 +21,12 @@ export const CallToAction = () => {
     >
       <div className="container">
         <div className="section-heading relative">
-          <h2 className="section-title">Sign up for free today</h2>
+          <h2 className="section-title">Join the Waitlist Today</h2>
           <p className="section-description mt-5">
-            Celebrate the jpoy of accomplishment with an app design that tracks
-            your progress and motivates you for your efforts.
+            Be among the first to experience effortless outfits every day. Join
+            now and get early access to a smarter way to dress.
           </p>
+
           <motion.img
             src={Star.src}
             alt="star image"
@@ -41,11 +44,10 @@ export const CallToAction = () => {
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary">Get for free</button>
-          <button className="btn btn-text gap-1">
-            <span>Survey</span>
-            <ArrowRight className="h-5 w-5" />
-          </button>
+          <div className="flex w-full max-w-sm items-center space-x-2">
+            <Input type="email" placeholder="Email" />
+            <Button type="submit">Subscribe</Button>
+          </div>
         </div>
       </div>
     </section>

@@ -6,50 +6,35 @@ const pricingTiers = [
   {
     title: "Free",
     monthlyPrice: 0,
-    buttonText: "Get started for free",
+    buttonText: "Join waitlist",
     popular: false,
     inverse: false,
-    features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "2GB storage",
-      "Integrations",
-      "Basic support",
-    ],
+    features: ["Up to 15 clothing items"],
   },
   {
-    title: "Pro",
+    title: "Premium",
     monthlyPrice: 9,
-    buttonText: "Sign up now",
+    buttonText: "Pre order",
     popular: true,
     inverse: true,
     features: [
-      "Up to 50 project members",
-      "Unlimited tasks and projects",
-      "50GB storage",
-      "Integrations",
       "Priority support",
-      "Advanced support",
-      "Export support",
+      "1 Daily Weather based outfit",
+      "Up to 50 clothing items",
     ],
   },
   {
-    title: "Business",
+    title: "Star",
     monthlyPrice: 19,
-    buttonText: "Sign up now",
+    buttonText: "Pre order",
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "200GB storage",
-      "Integrations",
-      "Dedicated account manager",
-      "Custom fields",
-      "Advanced analytics",
-      "Export capabilities",
-      "API access",
-      "Advanced security features",
+      "Virtual try-on",
+      "Personal body model",
+      "Priority support",
+      "3 Daily Weather based outfit",
+      "Unlimited clothing items",
     ],
   },
 ];
@@ -60,8 +45,10 @@ export const Pricing = () => {
         <div className="section-heading">
           <h2 className="section-title">Pricing</h2>
           <p className="section-description mt-5">
-            Free forever. Upgrade for unlimited tasks, better security and
-            features.
+            First <strong>1000 users</strong> get early access.
+            <br />
+            Pre-order a Premium or Star Package before our official Launch and
+            get <strong>2 months</strong> on us.
           </p>
         </div>
       </div>

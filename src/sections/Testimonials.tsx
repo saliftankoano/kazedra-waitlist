@@ -14,60 +14,61 @@ import { motion } from "framer-motion";
 import { Fragment } from "react";
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+    text: "I can't wait to try this app! Having daily weather-based outfit suggestions will save me so much time each morning.",
     imageSrc: avatar1.src,
     name: "Jamie Rivera",
     username: "@jamietechguru00",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Looking forward to finally having a tool that takes the guesswork out of dressing for the weather. This app is going to be a game-changer!",
     imageSrc: avatar2.src,
     name: "Josh Smith",
     username: "@jjsmith",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
+    text: "I’m so excited to use the virtual try-on feature! Being able to see how different outfits will look on me before stepping outside is going to be incredible.",
     imageSrc: avatar3.src,
     name: "Morgan Lee",
     username: "@morganleewhiz",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    text: "Can't wait to see how accurate the daily outfit recommendations will be. No more second-guessing what to wear when the weather changes!",
     imageSrc: avatar4.src,
     name: "Casey Jordan",
     username: "@caseyj",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+    text: "I’m really looking forward to planning my outfits around the weather with ease. This app will definitely make my mornings smoother!",
     imageSrc: avatar5.src,
     name: "Taylor Kim",
     username: "@taylorkimm",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
+    text: "Excited about the customization options this app will offer. I can’t wait to personalize my outfits and get tailored suggestions!",
     imageSrc: avatar6.src,
     name: "Riley Smith",
     username: "@rileysmith1",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+    text: "I’m eagerly waiting to try out the daily outfit suggestions. I love the idea of having my wardrobe adapt to the weather automatically.",
     imageSrc: avatar7.src,
     name: "Jordan Patels",
     username: "@jpatelsdesign",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    text: "Anticipating how this app will simplify my life by providing perfect outfits for any weather. It’s exactly what I’ve been looking for!",
     imageSrc: avatar8.src,
     name: "Sam Dawson",
     username: "@dawsontechtips",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
+    text: "Looking forward to a user-friendly app that helps me decide what to wear every day, no matter the weather. Can't wait to give it a try!",
     imageSrc: avatar9.src,
     name: "Casey Harper",
     username: "@casey09",
   },
 ];
+
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
@@ -121,10 +122,10 @@ export const Testimonials = () => {
           <div className="flex justify-center">
             <div className="tag">Testimonials</div>
           </div>
-          <h2 className="section-title mt-5">What users say</h2>
+          <h2 className="section-title mt-5">Is this really a problem?</h2>
           <p className="section-description mt-5">
-            From intuitive design to powerful tool our app has become an
-            essential tool for users around the world.
+            Many called this a stupid idea. But we found a crowd experiencing
+            the same problem.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import productImage from "@/assets/product-image.png";
+import productImage from "@/assets/outfit2.png";
 import pyramid from "@/assets/pyramid.png";
 import tube from "@/assets/tube.png";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -22,17 +22,26 @@ export const ProductShowcase = () => {
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Boost your productivity</div>
+            <div className="tag border-[#5D3FD3] text-black">
+              Making your life easier
+            </div>
           </div>
           <h2 className="section-title mt-5">
-            A more effective way to track progress
+            Why should you struggle to dress up?
           </h2>
           <p className="section-description mt-5">
-            Turn your ideas into a template effortlessly in just minutes
+            Plan outfits and get dressed faster to avoid adding unecessary
+            stress to your day.
           </p>
         </div>
         <div className="relative">
-          <Image className="mt-10" src={productImage} alt="product image" />
+          <Image
+            className="mt-10 mx-auto"
+            width={500}
+            height={600}
+            src={productImage}
+            alt="product image"
+          />
           <motion.img
             className="absolute -right-36 -top-32 hidden md:block"
             height={262}
