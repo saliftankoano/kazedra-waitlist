@@ -1,4 +1,4 @@
-import Logo from "@/assets/logosaas.png";
+import Logo from "@/assets/kazedra.png";
 import SocialX from "@/assets/social-x.svg";
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedin from "@/assets/social-linkedin.svg";
@@ -14,11 +14,10 @@ export const Footer = () => {
           <Image src={Logo} alt="saas logo" height={40} className="relative" />
         </div>
         <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
-          <a href="#">About</a>
-          <a href="#">Features</a>
-          <a href="#">Customers</a>
+          <a href="#">Why</a>
           <a href="#">Pricing</a>
-          <a href="#">Help</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Join</a>
           <a href="#">Careers</a>
         </nav>
         <div className="socials flex justify-center gap-6 mt-6">
@@ -28,7 +27,7 @@ export const Footer = () => {
           <SocialPin />
           <SocialYoutube />
         </div>
-        <p className="mt-6">&copy; 2024 Oweather Inc. All rights reserved</p>
+        <p className="mt-6">&copy; 2024 Kazedra Inc. All rights reserved</p>
       </div>
     </footer>
   );
