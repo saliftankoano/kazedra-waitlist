@@ -11,7 +11,7 @@ const pricingTiers = [
     buttonText: "Join waitlist",
     popular: false,
     inverse: false,
-    features: ["Up to 15 clothing items"],
+    features: ["Up to 50 clothing items"],
   },
   {
     title: "Premium",
@@ -21,9 +21,10 @@ const pricingTiers = [
     popular: true,
     inverse: true,
     features: [
+      "On body model",
       "Priority support",
-      "1 Daily Weather based outfit",
-      "Up to 50 clothing items",
+      "2 Daily Weather based outfit",
+      "Up to 100 clothing items",
     ],
   },
   {
@@ -35,8 +36,9 @@ const pricingTiers = [
     inverse: false,
     features: [
       "Virtual try-on",
-      "Personal body model",
+      "On body model",
       "Priority support",
+      "AI clothing care assistant",
       "3 Daily Weather based outfit",
       "Unlimited clothing items",
     ],
