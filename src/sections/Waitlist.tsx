@@ -9,8 +9,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Check } from "lucide-react";
 import fetch from "node-fetch";
-
-export const CallToAction = () => {
+type refProp = {
+  refProp: React.RefObject<HTMLDivElement>;
+};
+export const Waitlist: React.FC<refProp> = ({ refProp }) => {
   const [email, setEmail] = useState<string>("none");
   const [isSuccessful, setIsSuccessful] = useState<Boolean>(false);
   const [error, setError] = useState<string>("");
@@ -75,10 +77,10 @@ export const CallToAction = () => {
   };
   return (
     <section
-      ref={sectionRef}
+      ref={refProp}
       className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip"
     >
-      <div className="container">
+      <div ref={sectionRef} className="container">
         <div className="section-heading relative">
           <h2 className="section-title">Join the Waitlist Today</h2>
           <p className="section-description mt-5">

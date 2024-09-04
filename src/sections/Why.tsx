@@ -5,8 +5,10 @@ import pyramid from "@/assets/pyramid.png";
 import tube from "@/assets/tube.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-export const ProductShowcase = () => {
+type refProp = {
+  refProp: React.RefObject<HTMLDivElement>;
+};
+export const Why: React.FC<refProp> = ({ refProp }) => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -16,10 +18,10 @@ export const ProductShowcase = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
     <section
-      ref={sectionRef}
+      ref={refProp}
       className="bg-gradient-to-b from-[#fff] to-[#D2DCFF] py-24 overflow-x-clip"
     >
-      <div className="container">
+      <div ref={sectionRef} className="container">
         <div className="section-heading">
           <div className="flex justify-center">
             <div className="tag border-[#5D3FD3] text-black">

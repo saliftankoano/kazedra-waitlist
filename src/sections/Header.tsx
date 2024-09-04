@@ -2,7 +2,19 @@ import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/kazedra.png";
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
-export const Header = () => {
+
+type HeaderProp = {
+  onJoin: () => void;
+  onWhy: () => void;
+  onPricing: () => void;
+  onTestimonials: () => void;
+};
+export const Header: React.FC<HeaderProp> = ({
+  onJoin,
+  onWhy,
+  onPricing,
+  onTestimonials,
+}) => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
@@ -20,10 +32,19 @@ export const Header = () => {
             <Image src={Logo} alt="saas logo" height={60} width={60} />
             <MenuIcon className="h-5 w-5 md:hidden" />
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#">Why</a>
-              <a href="#">Pricing</a>
-              <a href="#">Testimonials</a>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center tracking-tight">
+              <a className="hover:cursor-pointer" onClick={onWhy}>
+                Why
+              </a>
+              <a className="hover:cursor-pointer" onClick={onPricing}>
+                Pricing
+              </a>
+              <a className="hover:cursor-pointer" onClick={onTestimonials}>
+                Testimonials
+              </a>
+              <button
+                onClick={onJoin}
+                className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center tracking-tight"
+              >
                 Join
               </button>
             </nav>

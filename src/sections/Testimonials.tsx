@@ -72,7 +72,9 @@ const testimonials = [
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
-
+type refProp = {
+  refProp: React.RefObject<HTMLDivElement>;
+};
 const TestimonialsColumn = (props: {
   className?: string;
   testimonials: typeof testimonials;
@@ -114,9 +116,9 @@ const TestimonialsColumn = (props: {
     </motion.div>
   </div>
 );
-export const Testimonials = () => {
+export const Testimonials: React.FC<refProp> = ({ refProp }) => {
   return (
-    <section className="bg-white">
+    <section ref={refProp} className="bg-white">
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">

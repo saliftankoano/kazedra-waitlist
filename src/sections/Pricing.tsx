@@ -2,10 +2,12 @@
 import { twMerge } from "tailwind-merge";
 import CheckIcon from "@/assets/check.svg";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 const pricingTiers = [
   {
     title: "Free",
     monthlyPrice: 0,
+    priceId: "",
     buttonText: "Join waitlist",
     popular: false,
     inverse: false,
@@ -14,6 +16,7 @@ const pricingTiers = [
   {
     title: "Premium",
     monthlyPrice: 9,
+    priceId: "price_1Pv3WnB6K2WVrIh2UXXJMBHA",
     buttonText: "Pre order",
     popular: true,
     inverse: true,
@@ -26,6 +29,7 @@ const pricingTiers = [
   {
     title: "Star",
     monthlyPrice: 19,
+    priceId: "price_1Pv3cXB6K2WVrIh2hsOMKFsM",
     buttonText: "Pre order",
     popular: false,
     inverse: false,
@@ -38,9 +42,26 @@ const pricingTiers = [
     ],
   },
 ];
-export const Pricing = () => {
+type refProp = {
+  refProp: React.RefObject<HTMLDivElement>;
+};
+export const Pricing: React.FC<refProp> = ({ refProp }) => {
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    if (query.get("success")) {
+      console.log("Order placed! You will receive an email confirmation.");
+    }
+
+    if (query.get("canceled")) {
+      console.log(
+        "Order canceled -- continue to shop around and checkout when you’re ready."
+      );
+    }
+  }, []);
+
   return (
-    <section className="py-24 bg-white">
+    <section ref={refProp} className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
           <h2 className="section-title">Pricing</h2>
@@ -48,14 +69,22 @@ export const Pricing = () => {
             First <strong>1000 users</strong> get early access.
             <br />
             Pre-order a Premium or Star Package before our official Launch and
-            get <strong>2 months</strong> on us.
+            get a<strong> free month</strong> on us.
           </p>
         </div>
       </div>
       <div className="cards flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
         {pricingTiers.map(
           (
-            { title, monthlyPrice, buttonText, popular, inverse, features },
+            {
+              title,
+              monthlyPrice,
+              priceId,
+              buttonText,
+              popular,
+              inverse,
+              features,
+            },
             key
           ) => (
             <div
@@ -98,14 +127,21 @@ export const Pricing = () => {
                 </span>
                 <span className="tracking-tight text-black/50">/month</span>
               </div>
-              <button
-                className={twMerge(
-                  "btn btn-primary justify-center w-full mt-[30px]",
-                  inverse == true && "bg-white text-black font-bold"
-                )}
+              <form
+                action={`/api/checkout_sessions?priceId=${priceId}`}
+                method="POST"
               >
-                {buttonText}
-              </button>
+                <button
+                  className={twMerge(
+                    "btn btn-primary justify-center w-full mt-[30px]",
+                    inverse == true && "bg-white text-black font-bold"
+                  )}
+                  role="link"
+                >
+                  {buttonText}
+                </button>
+              </form>
+
               <ul className="flex-col gap-5 mt-8">
                 {features.map((feature, key) => (
                   <li key={key} className="text-sm flex items-center gap-4">
