@@ -8,6 +8,7 @@ import { Pricing } from "@/sections/Pricing";
 import { Testimonials } from "@/sections/Testimonials";
 import { useRef } from "react";
 import { Why } from "@/sections/Why";
+import Head from "next/head";
 export default function Home() {
   const pricingRef = useRef<HTMLDivElement | null>(null);
   const testimonialsRef = useRef<HTMLDivElement | null>(null);
