@@ -57,10 +57,15 @@ export default function Home() {
       <Hero onJoin={scrollToWaitlist} />
       <LogoTicker />
       <Why refProp={whyRef} />
-      <Pricing refProp={pricingRef} />
+      <Pricing refProp={pricingRef} onJoin={scrollToWaitlist} />
       <Testimonials refProp={testimonialsRef} />
       <Waitlist refProp={waitlistRef} />
-      <Footer />
+      <Footer
+        onJoin={scrollToWaitlist}
+        onWhy={scrollToWhy}
+        onPricing={scrollToPricing}
+        onTestimonials={scrollToTestimonials}
+      />
     </>
   );
 }

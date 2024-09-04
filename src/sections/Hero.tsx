@@ -22,12 +22,12 @@ export const Hero: React.FC<HeroProp> = ({ onJoin }) => {
   return (
     <section
       ref={heroRef}
-      className="pt-8 pb-20 md:pt-5 md:pb-10 bg-no-repeat bg-center bg-cover bg-[url('../assets/hero.jpg')] overflow-x-clip"
+      className="-mt-[7%] pb-20 md:pt-5 md:pb-10 bg-no-repeat bg-center bg-cover bg-[url('../assets/hero.jpg')] overflow-x-clip"
     >
       <div className="container">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
-            <div className="tag text-white">Version 1.0</div>
+            <div className="tag text-white border-black">Version 1.0</div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white/85 bg-clip-text mt-6">
               Effortless Outfit choices are here
             </h1>
@@ -37,8 +37,15 @@ export const Hero: React.FC<HeroProp> = ({ onJoin }) => {
                 Join the waitlist
               </button>
               <button className="btn btn-text gap-1">
-                <span className="text-white">Survey</span>
-                <ArrowIcon className=" h-5 w-5" />
+                <a
+                  href="https://forms.gle/g16MaKmKtFJGJJjA7" // Replace with actual social media URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" hover:cursor-pointer inline-flex items-center gap-1"
+                >
+                  <span className="text-white">Survey</span>
+                  <ArrowIcon className=" h-5 w-5" />
+                </a>
               </button>
             </div>
           </div>

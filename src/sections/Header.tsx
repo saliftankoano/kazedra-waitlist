@@ -22,8 +22,10 @@ export const Header: React.FC<HeaderProp> = ({
           Dress to impress, effortlessly
         </p>
         <div className="inline-flex gap-1 items-center">
-          <p>Get started for free</p>
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
+          <p onClick={onJoin} className="hover:cursor-pointer">
+            Join the waitlist
+          </p>
         </div>
       </div>
       <div className="py-5">

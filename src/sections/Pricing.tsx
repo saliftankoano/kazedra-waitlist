@@ -44,8 +44,9 @@ const pricingTiers = [
 ];
 type refProp = {
   refProp: React.RefObject<HTMLDivElement>;
+  onJoin: () => void;
 };
-export const Pricing: React.FC<refProp> = ({ refProp }) => {
+export const Pricing: React.FC<refProp> = ({ refProp, onJoin }) => {
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
@@ -127,20 +128,29 @@ export const Pricing: React.FC<refProp> = ({ refProp }) => {
                 </span>
                 <span className="tracking-tight text-black/50">/month</span>
               </div>
-              <form
-                action={`/api/checkout_sessions?priceId=${priceId}`}
-                method="POST"
-              >
+              {priceId != "" ? (
+                <form
+                  action={`/api/checkout_sessions?priceId=${priceId}`}
+                  method="POST"
+                >
+                  <button
+                    className={twMerge(
+                      "btn btn-primary justify-center w-full mt-[30px]",
+                      inverse == true && "bg-white text-black font-bold"
+                    )}
+                    role="link"
+                  >
+                    {buttonText}
+                  </button>
+                </form>
+              ) : (
                 <button
-                  className={twMerge(
-                    "btn btn-primary justify-center w-full mt-[30px]",
-                    inverse == true && "bg-white text-black font-bold"
-                  )}
-                  role="link"
+                  className="btn btn-primary justify-center w-full mt-[30px]"
+                  onClick={onJoin}
                 >
                   {buttonText}
                 </button>
-              </form>
+              )}
 
               <ul className="flex-col gap-5 mt-8">
                 {features.map((feature, key) => (

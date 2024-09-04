@@ -126,8 +126,8 @@ export const Testimonials: React.FC<refProp> = ({ refProp }) => {
           </div>
           <h2 className="section-title mt-5">Is this really a problem?</h2>
           <p className="section-description mt-5">
-            Many called this a stupid idea. But we found a crowd experiencing
-            the same problem.
+            Some called this idea stupid. But we found a crowd experiencing the
+            same problem.
           </p>
         </div>
 
