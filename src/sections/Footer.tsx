@@ -56,7 +56,7 @@ export const Footer: React.FC<HeaderProp> = ({
             <SocialInsta />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/kazedra/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:scale-125 hover:cursor-pointer"
