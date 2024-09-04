@@ -20,8 +20,8 @@ export async function POST(req) {
   }
 
   try {
-    // 3 months delay for the next payment
-    const trialPeriodDays = 90;
+    // 2 months delay for the next payment
+    const trialPeriodDays = 60;
 
     // Create Checkout Session for a subscription
     const session = await stripe.checkout.sessions.create({
